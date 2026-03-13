@@ -203,6 +203,36 @@
       display: flex; justify-content: center; align-items: center;
       opacity: 0;
       animation: fadeIn 1.2s 0.8s ease both;
+      position: relative;
+    }
+    .download-cv-btn {
+      position: absolute;
+      top: -50px;
+      left: 0;
+      padding: 0.7rem 1.5rem;
+      background: var(--accent);
+      color: #000;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: none;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+      transition: background 0.3s, transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 10;
+    }
+    .download-cv-btn:hover { 
+      background: #fff; 
+      transform: translateY(-2px);
+    }
+    .download-cv-btn .icon {
+      font-size: 0.9rem;
     }
     .photo-frame {
       position: relative;
@@ -922,7 +952,7 @@
         title: 'Text-Based Adventure Game',
         desc: 'Interactive CLI-based adventure game built in Java demonstrating OOP design patterns and game state management.',
         tags: ['Java', 'OOP', 'CLI'],
-        link: 'https://github.com/Somesh4206/TextAdventureGame',
+        link: 'https://adventure-game-frontend-rujv.onrender.com',
       },
       {
         num: '04',
@@ -1204,16 +1234,15 @@
             </div>
 
             <div className="hero-photo-wrap">
+              <a 
+                href="Somesh_Resume.pdf" 
+                download="Somesh_M_Resume.pdf" 
+                className="download-cv-btn"
+              >
+                <span className="icon">⬇</span>
+                <span>Download CV</span>
+              </a>
               <div className="photo-frame">
-                <a 
-                  href="Somesh_Resume.pdf" 
-                  download="Somesh_M_Resume.pdf" 
-                  className="download-cv-btn"
-                  onClick={handleDownload}
-                >
-                  <span className="icon">⬇</span>
-                  <span>Download CV</span>
-                </a>
                 <div className="photo-inner">
                   <div className="avatar-placeholder">
                     <img src="profile.jpg" alt="Somesh M" className="avatar-img" />
