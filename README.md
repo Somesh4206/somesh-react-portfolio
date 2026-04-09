@@ -18,7 +18,7 @@ I specialize in:
 - Python Development
 - Machine Learning
 - React & Web Technologies
-- Cybersecurity fundamentals
+- Cloud Computing
 
 I enjoy building innovative projects that combine **AI, software development, and real-world problem solving**.
 
@@ -61,13 +61,16 @@ Interactive adventure game developed using Java.
 ### 🌱 AI Crop Recommendation System
 Machine learning model that recommends crops based on soil and environmental conditions.
 
+### 🧠 DiagnoraX
+Your Personal AI Health Companion — A smart mobile application for health monitoring and AI-driven diagnostic assistance.
+
 ---
 
 # 💼 Internships
 
 - **Full Stack Development Intern – Nanda Info Tech**
 - **Machine Learning Intern – Brainery Spot Technologies**
-- **Cyber Security Intern – Bound By Code**
+- **Cloud Computing Intern – Brainery Spot Technologies**
 
 ---
 
