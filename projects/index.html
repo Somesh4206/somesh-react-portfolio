@@ -6,89 +6,91 @@
 <meta property="og:title" content="Projects | Case Studies | Somesh M"/>
 <meta property="og:url" content="https://somesh-m.netlify.app/projects/"/><meta property="og:type" content="website"/>
 <meta property="og:image" content="https://somesh-m.netlify.app/profile.png"/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
-<style>:root{--bg:#FAF6EF;--surface:#FFFDF8;--surface2:#F3EBDD;--ink:#2A2118;--ink2:#4A3D30;--muted:#7C6C59;--accent:#8C5A2B;--accent-deep:#5F3B1A;--accent-soft:#EADBC3;--line:#E4D6BF;--line2:#D6C4A6;--serif:'Fraunces',Georgia,serif;--sans:'DM Sans',sans-serif;--mono:'Space Mono',monospace;--disp:'Bebas Neue',sans-serif}
+<meta name="theme-color" content="#050508"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#050508;--surface:#0d0d14;--accent:#6effcb;--accent2:#ff6e6e;--accent3:#6e9eff;--text:#e8e8f0;--muted:#5a5a7a;--border:rgba(110,255,203,0.12)}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E")}
-::selection{background:var(--accent);color:#fff}a{color:var(--accent-deep)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-.skip-link{position:fixed;top:-60px;left:16px;z-index:2000;background:var(--ink);color:#fff;font-family:var(--mono);font-size:.75rem;padding:.6rem 1rem;text-decoration:none;transition:top .2s}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.4}
+::selection{background:var(--accent);color:#000}a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip-link{position:fixed;top:-60px;left:16px;z-index:2000;background:var(--accent);color:#000;font-family:'Space Mono',monospace;font-size:.75rem;padding:.6rem 1rem;text-decoration:none}
 .skip-link:focus{top:12px}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 3.5rem;background:rgba(250,246,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.logo{font-family:var(--disp);font-size:1.5rem;letter-spacing:.15em;color:var(--ink);text-decoration:none}
-.logo em{font-style:normal;color:var(--accent)}
-.nav-links{display:flex;gap:1.8rem;list-style:none}
-.nav-links a{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;position:relative}
-.nav-links a:hover{color:var(--accent-deep)}
-.wrap{max-width:920px;margin:0 auto;padding:7.5rem 1.5rem 4rem;position:relative;z-index:2}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 4rem;background:rgba(5,5,8,.7);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.15em;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.nav-links a:hover{color:var(--accent)}
+.wrap{max-width:980px;margin:0 auto;padding:7rem 2rem 4rem;position:relative;z-index:2}
 .case-topnav{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
-.back-link{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-deep);text-decoration:none;border:1px solid var(--line2);padding:.6rem 1rem;border-radius:4px;background:var(--surface)}
-.back-link:hover{border-color:var(--accent)}
-.case-num{font-family:var(--mono);font-size:.7rem;letter-spacing:.25em;color:var(--accent);text-transform:uppercase}
-h1.case-title{font-family:var(--disp);font-size:clamp(2.8rem,6vw,5rem);line-height:.95;letter-spacing:.02em;margin:.6rem 0}
-.case-tagline{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--accent-deep);line-height:1.5}
-.case-intro{font-size:1.02rem;line-height:1.85;color:var(--ink2);margin-top:1.2rem;max-width:680px}
-.case-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
-.case-meta span{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line2);padding:.35rem .7rem;border-radius:20px;background:var(--surface);color:var(--ink2)}
+.back-link{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1px solid var(--border);padding:.6rem 1rem;background:var(--surface)}
+.back-link:hover{background:var(--accent);color:#000}
+.case-num{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.25em;color:var(--accent);text-transform:uppercase}
+h1.case-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6vw,5rem);line-height:.95;letter-spacing:.03em;margin:.6rem 0}
+.case-tagline{font-size:1.15rem;color:var(--muted);font-style:italic;margin-top:.4rem}
+.case-intro{font-size:1rem;line-height:1.85;color:rgba(232,232,240,.78);margin-top:1.1rem;max-width:700px}
+.case-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.case-meta span{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--border);padding:.32rem .7rem;color:var(--accent)}
 .case-links{display:flex;gap:.7rem;margin-top:1.4rem;flex-wrap:wrap}
-.btn-primary{padding:.8rem 1.9rem;background:var(--ink);color:#FBF7EE;font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);border-radius:4px;display:inline-block}
-.btn-primary:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
-.btn-outline{padding:.8rem 1.9rem;background:transparent;color:var(--accent-deep);font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--accent);border-radius:4px;display:inline-block}
-.btn-outline:hover{background:var(--accent);color:#fff}
-.btn-ghost{padding:.7rem 1rem;border:1px solid var(--line2);color:var(--ink2);font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-radius:4px;background:transparent;display:inline-block}
-.btn-ghost:hover{border-color:var(--accent);color:var(--accent-deep)}
-.case-hero-visual{margin-top:2rem;border:1px solid var(--line2);border-radius:8px;background:var(--surface);padding:2.2rem;position:relative;overflow:hidden}
-.case-hero-visual .big{font-family:var(--disp);font-size:clamp(2.4rem,6vw,4rem);line-height:1}
-.case-hero-visual .sub{font-family:var(--serif);font-style:italic;color:var(--accent-deep);margin-top:.5rem}
-.case-hero-visual .flow-mini{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:1rem;line-height:2;letter-spacing:.04em}
-.case-section{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-top:1.4rem}
-.case-section h2{font-family:var(--disp);font-size:1.7rem;letter-spacing:.04em;margin-bottom:.3rem}
-.case-kicker{font-family:var(--mono);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
-.case-section p{font-size:.94rem;line-height:1.85;color:var(--ink2);margin-bottom:.9rem}
-.case-section ul{margin:.4rem 0 1rem 1.1rem;font-size:.92rem;line-height:1.8;color:var(--ink2)}
-.case-section li{margin-bottom:.45rem}
-.case-section strong{color:var(--ink)}
-details.wf-stage{border:1px solid var(--line2);border-radius:6px;background:var(--bg);margin-bottom:.4rem}
+.btn-case{padding:.6rem 1.3rem;background:var(--accent);color:#000;font-family:'Space Mono',monospace;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));display:inline-block}
+.btn-case:hover{background:#fff}
+.btn-ghost{padding:.6rem 1.3rem;background:transparent;color:var(--accent);font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid var(--accent);clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));display:inline-block}
+.btn-ghost:hover{background:var(--accent);color:#000}
+.case-hero-visual{margin-top:2rem;border:1px solid var(--border);background:linear-gradient(160deg,var(--surface) 0%,rgba(110,158,255,.06) 60%,rgba(110,255,203,.07) 100%);padding:2.2rem}
+.case-hero-visual .big{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1;letter-spacing:.04em}
+.case-hero-visual .sub{color:var(--muted);font-style:italic;margin-top:.5rem}
+.case-hero-visual .flow-mini{font-family:'Space Mono',monospace;font-size:.66rem;color:var(--muted);margin-top:1rem;line-height:2}
+.case-section{background:var(--surface);border:1px solid var(--border);padding:2rem;margin-top:1.3rem}
+.case-kicker{font-family:'Space Mono',monospace;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.case-section h2{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.04em;margin-bottom:.8rem}
+.case-section p{font-size:.93rem;line-height:1.85;color:rgba(232,232,240,.75);margin-bottom:.85rem}
+.case-section ul{margin:.4rem 0 1rem 1.1rem;font-size:.9rem;line-height:1.8;color:rgba(232,232,240,.75)}
+.case-section li{margin-bottom:.45rem}.case-section strong{color:var(--text)}
+details.wf-stage{border:1px solid var(--border);background:var(--bg);margin-bottom:.45rem}
 details.wf-stage[open]{border-color:var(--accent)}
-details.wf-stage summary{cursor:pointer;padding:.95rem 1.1rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+details.wf-stage summary{cursor:pointer;padding:.95rem 1.1rem;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text);list-style:none;display:flex;justify-content:space-between;gap:1rem}
 details.wf-stage summary::-webkit-details-marker{display:none}
-details.wf-stage summary:hover{color:var(--accent-deep)}
-.wf-detail{padding:0 1.1rem 1.1rem;font-size:.9rem;line-height:1.75;color:var(--ink2)}
-.wf-arrow{text-align:center;color:var(--accent);font-size:1.1rem;line-height:1;padding:.2rem 0}
-.arch-box{border:1px solid var(--line2);border-radius:6px;background:var(--bg);padding:1rem 1.2rem}
-.arch-box b{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);display:block;margin-bottom:.35rem}
+.wf-detail{padding:0 1.1rem 1.1rem;font-size:.9rem;line-height:1.75;color:var(--muted)}
+.wf-arrow{text-align:center;color:var(--accent);font-size:1.05rem;line-height:1;padding:.2rem 0}
+.arch-box{border:1px solid var(--border);background:var(--bg);padding:1rem 1.2rem}
+.arch-box b{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent3);display:block;margin-bottom:.35rem}
 .arch-box p{font-size:.88rem;line-height:1.7;margin:0}
-.arch-arrow{text-align:center;color:var(--accent);padding:.25rem 0;font-size:1.1rem}
-.feat{border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.2rem;margin-top:.8rem;background:var(--bg)}
-.feat h3{font-family:var(--disp);font-size:1.2rem;letter-spacing:.04em;margin-bottom:.3rem}
+.arch-arrow{text-align:center;color:var(--accent);padding:.25rem 0;font-size:1.05rem}
+.feat{border:1px solid var(--border);padding:1.1rem 1.2rem;margin-top:.8rem;background:var(--bg)}
+.feat h3{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.04em;margin-bottom:.3rem}
 .feat p{font-size:.89rem;line-height:1.75;margin-bottom:.3rem}
-.feat .why{font-family:var(--serif);font-style:italic;color:var(--accent-deep);font-size:.9rem}
-table.stack{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.87rem}
-table.stack th{font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;text-align:left;background:var(--surface2);color:var(--accent-deep);padding:.7rem .9rem;border:1px solid var(--line)}
-table.stack td{padding:.7rem .9rem;border:1px solid var(--line);color:var(--ink2)}
-.chal{border-left:3px solid var(--accent);background:var(--bg);padding:1rem 1.2rem;margin-top:.9rem;border-radius:0 6px 6px 0}
-.chal p{font-size:.9rem;margin-bottom:.35rem}
-.disclaimer{font-size:.82rem;line-height:1.7;color:var(--muted);border:1px dashed var(--line2);border-radius:6px;padding:.9rem 1.1rem;background:var(--bg);margin-top:1rem}
+.feat .why{color:var(--accent);font-size:.84rem;font-family:'Space Mono',monospace}
+dl.stack{display:grid;grid-template-columns:170px 1fr;border:1px solid var(--border);margin-top:1rem}
+dl.stack dt{font-family:'Space Mono',monospace;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:rgba(110,255,203,.04);padding:.8rem 1rem;border-bottom:1px solid var(--border)}
+dl.stack dd{font-size:.87rem;color:rgba(232,232,240,.78);padding:.8rem 1rem;border-bottom:1px solid var(--border);line-height:1.6}
+.chal{border-left:3px solid var(--accent);background:rgba(110,255,203,.03);padding:1rem 1.2rem;margin-top:.9rem}
+.chal p{font-size:.89rem;margin-bottom:.35rem}
+.disclaimer{font-size:.8rem;line-height:1.7;color:var(--muted);border:1px dashed var(--border);padding:.9rem 1.1rem;margin-top:1rem;background:var(--bg)}
 .prevnext{display:flex;justify-content:space-between;gap:.8rem;margin:2rem 0 1rem;flex-wrap:wrap}
-.pcard{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:1.4rem}
-.pcard-visual{padding:1.6rem;border-bottom:1px solid var(--line);position:relative}
-.pcard-visual h2{font-size:2rem}
-.pcard-visual .ptag{font-family:var(--serif);font-style:italic;color:var(--accent-deep)}
-.pcard-body{padding:1.5rem 1.6rem;display:flex;flex-direction:column;gap:.9rem}
-.pcard-desc{font-size:.9rem;line-height:1.7;color:var(--ink2)}
-footer{border-top:1px solid var(--line);padding:1.6rem 3.5rem;display:flex;justify-content:space-between;align-items:center;background:var(--surface);gap:1rem;flex-wrap:wrap;position:relative;z-index:2}
-.footer-copy{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
-.footer-logo{font-family:var(--disp);font-size:1.15rem;letter-spacing:.15em;color:var(--accent)}
-@media(max-width:960px){nav{padding:1rem 1.4rem}.wrap{padding:6.5rem 1.1rem 3rem}footer{padding:1.4rem}}
+.prow{border:1px solid var(--border);background:var(--bg);margin-top:1.2rem;position:relative}
+.prow a.row{display:grid;grid-template-columns:60px 1fr auto;gap:2rem;align-items:center;padding:2rem 2.5rem;text-decoration:none;color:inherit}
+.prow a.row:hover{background:rgba(110,255,203,.04)}
+.pnum{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--border);line-height:1}
+.prow h2{font-size:1.6rem;margin-bottom:.3rem}
+.prow .pcat{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.prow .ptag{font-size:.85rem;color:var(--text);opacity:.85;font-style:italic}
+.prow p.desc{font-size:.85rem;color:var(--muted)}
+.prow .tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem}
+.prow .tags span{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .6rem;border:1px solid var(--border);color:var(--muted)}
+.parr{font-size:1.2rem;color:var(--muted)}
+.prow .acts{display:flex;gap:.6rem;flex-wrap:wrap;padding:0 2.5rem 1.5rem calc(2.5rem + 60px + 2rem)}
+footer{border-top:1px solid var(--border);padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--surface);gap:1rem;flex-wrap:wrap;position:relative;z-index:2}
+.footer-copy{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.15em;color:var(--accent)}
+@media(max-width:900px){nav{padding:1.2rem 2rem}.wrap{padding:6rem 1.2rem 3rem}dl.stack{grid-template-columns:1fr}.prow a.row{grid-template-columns:40px 1fr}.parr{display:none}footer{padding:1.4rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style></head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<nav aria-label="Primary"><a href="/" class="logo">S<em>M</em></a>
+<nav aria-label="Primary"><a href="/" class="logo">SM</a>
 <ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/projects/">Projects</a></li></ul></nav>
 <main class="wrap" id="main"><div class="case-topnav"><a class="back-link" href="/">← Home</a><span class="case-num">Selected Work</span></div>
 <p class="case-num">Selected Work</p><h1 class="case-title">Project Case Studies</h1>
-<p class="case-tagline">Problem → solution → workflow → architecture → result.</p><article class='pcard'><div class='pcard-visual'><p class='case-kicker'>Project 01 · AI Platform · Career Intelligence</p><h2>SkillVision AI</h2><p class='ptag'>Intelligent Career &amp; Skill Intelligence System</p></div><div class='pcard-body'><p class='pcard-desc'>SkillVision is a full-stack AI career copilot and placement platform. The verified build is React 19 + Vite + Tailwind, an Express + TypeScript backend, Google Gemini 2.5 Flash agents, JWT + bcrypt auth, and a file-backe…</p><div class='case-links'><a class='btn-primary' href='/projects/skillvision-ai/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/SkillVision'>GitHub</a></div></div></article><article class='pcard'><div class='pcard-visual'><p class='case-kicker'>Project 02 · AI · Architectural Planning</p><h2>OpenBlueprint</h2><p class='ptag'>From Measurements to Intelligent Blueprints.</p></div><div class='pcard-body'><p class='pcard-desc'>OpenBlueprint is an AI-assisted architectural planning system: plot measurements and requirements in, reasoned floor-plan options out, then 2D editing, 3D visualisation, INR cost estimation and PDF/PNG/SVG/JSON export. V…</p><div class='case-links'><a class='btn-primary' href='/projects/openblueprint/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/OpenBlueprint'>GitHub</a></div></div></article><article class='pcard'><div class='pcard-visual'><p class='case-kicker'>Project 03 · Health AI · Mobile</p><h2>DiagnoraX AI</h2><p class='ptag'>Your Personal AI Health Companion</p></div><div class='pcard-body'><p class='pcard-desc'>DiagnoraX AI is a Flutter/Dart mobile health companion using Firebase Auth/Firestore and Gemini 2.0 Flash with a Groq fallback. Verified: symptom checking with severity, prescription OCR, lab-report analysis, drug intera…</p><div class='case-links'><a class='btn-primary' href='/projects/diagnorax/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/DiagnoraX-App'>GitHub</a></div></div></article><article class='pcard'><div class='pcard-visual'><p class='case-kicker'>Project 04 · EdTech · Multilingual Learning</p><h2>JeduAI Connect</h2><p class='ptag'>Smart Learning and Language Empowerment</p></div><div class='pcard-body'><p class='pcard-desc'>JeduAI Connect is a Flutter/Dart multilingual learning platform for VSB Engineering College: student/staff/admin portals, Firebase auth, Gemini 2.5 Flash plus Groq/HuggingFace translation, online classes with video rooms…</p><div class='case-links'><a class='btn-primary' href='/projects/jeduai-connect/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/JeduAI'>GitHub</a></div></div></article><article class='pcard'><div class='pcard-visual'><p class='case-kicker'>Project 05 · ML Research · NLP</p><h2>AppleSupport AI</h2><p class='ptag'>AI Customer Support Agent — Research Pipeline</p></div><div class='pcard-body'><p class='pcard-desc'>AppleSupport AI is a support-agent research pipeline on real AppleSupport tweets — not a chatbot demo. Verified phases 1–3: thoughtvector/customer-support-on-twitter loading, reply-graph reconstruction, 10-class taxonomy…</p><div class='case-links'><a class='btn-primary' href='/projects/apple-support-agent/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/Apple-Support-Agent'>GitHub</a></div></div></article><article class='pcard'><div class='pcard-visual'><p class='case-kicker'>Project 06 · Game · Full-Stack</p><h2>Adventure Game</h2><p class='ptag'>THE ARCHIVE — a full-stack text adventure</p></div><div class='pcard-body'><p class='pcard-desc'>THE ARCHIVE is a full-stack text adventure: React frontend (choices, 18ms typewriter, ambient backgrounds, JWT auth, leaderboard) and Spring Boot backend (38-scene story service, gated choices, achievements, scoring, lea…</p><div class='case-links'><a class='btn-primary' href='/projects/adventure-game/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/adventure-game'>GitHub</a></div></div></article>
+<p class="case-tagline">Problem → solution → workflow → architecture → result.</p><div class='prow'><a class='row' href='/projects/skillvision-ai/'><span class='pnum'>01</span><span><span class='pcat'>AI Platform · Career Intelligence</span><h2>SkillVision AI</h2><span class='ptag'>Intelligent Career &amp; Skill Intelligence System</span><p class='desc'>SkillVision is a full-stack AI career copilot and placement platform. The verified build is React 19 + Vite + Tailwind, an Express + TypeScript backend, Google Gemini 2.5 Flash agents, JWT + bcrypt au…</p><span class='tags'><span>React</span><span>Vite</span><span>Express</span><span>Gemini 2.5 Flash</span></span></span><span class='parr'>↗</span></a><div class='acts'><a class='btn-case' href='/projects/skillvision-ai/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/SkillVision'>GitHub</a></div></div><div class='prow'><a class='row' href='/projects/openblueprint/'><span class='pnum'>02</span><span><span class='pcat'>AI · Architectural Planning</span><h2>OpenBlueprint</h2><span class='ptag'>From Measurements to Intelligent Blueprints.</span><p class='desc'>OpenBlueprint is an AI-assisted architectural planning system: plot measurements and requirements in, reasoned floor-plan options out, then 2D editing, 3D visualisation, INR cost estimation and PDF/PN…</p><span class='tags'><span>Next.js</span><span>Three.js</span><span>Prisma</span><span>Zustand</span></span></span><span class='parr'>↗</span></a><div class='acts'><a class='btn-case' href='/projects/openblueprint/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/OpenBlueprint'>GitHub</a></div></div><div class='prow'><a class='row' href='/projects/diagnorax/'><span class='pnum'>03</span><span><span class='pcat'>Health AI · Mobile</span><h2>DiagnoraX AI</h2><span class='ptag'>Your Personal AI Health Companion</span><p class='desc'>DiagnoraX AI is a Flutter/Dart mobile health companion using Firebase Auth/Firestore and Gemini 2.0 Flash with a Groq fallback. Verified: symptom checking with severity, prescription OCR, lab-report a…</p><span class='tags'><span>Flutter</span><span>Firebase</span><span>Gemini 2.0 Flash</span></span></span><span class='parr'>↗</span></a><div class='acts'><a class='btn-case' href='/projects/diagnorax/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/DiagnoraX-App'>GitHub</a></div></div><div class='prow'><a class='row' href='/projects/jeduai-connect/'><span class='pnum'>04</span><span><span class='pcat'>EdTech · Multilingual Learning</span><h2>JeduAI Connect</h2><span class='ptag'>Smart Learning and Language Empowerment</span><p class='desc'>JeduAI Connect is a Flutter/Dart multilingual learning platform for VSB Engineering College: student/staff/admin portals, Firebase auth, Gemini 2.5 Flash plus Groq/HuggingFace translation, online clas…</p><span class='tags'><span>Flutter</span><span>Firebase</span><span>Gemini 2.5 Flash</span></span></span><span class='parr'>↗</span></a><div class='acts'><a class='btn-case' href='/projects/jeduai-connect/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/JeduAI'>GitHub</a></div></div><div class='prow'><a class='row' href='/projects/apple-support-agent/'><span class='pnum'>05</span><span><span class='pcat'>ML Research · NLP</span><h2>AppleSupport AI</h2><span class='ptag'>AI Customer Support Agent — Research Pipeline</span><p class='desc'>AppleSupport AI is a support-agent research pipeline on real AppleSupport tweets — not a chatbot demo. Verified phases 1–3: thoughtvector/customer-support-on-twitter loading, reply-graph reconstructio…</p><span class='tags'><span>Python</span><span>scikit-learn</span><span>sentence-transformers</span></span></span><span class='parr'>↗</span></a><div class='acts'><a class='btn-case' href='/projects/apple-support-agent/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/Apple-Support-Agent'>GitHub</a></div></div><div class='prow'><a class='row' href='/projects/adventure-game/'><span class='pnum'>06</span><span><span class='pcat'>Game · Full-Stack</span><h2>Adventure Game</h2><span class='ptag'>THE ARCHIVE — a full-stack text adventure</span><p class='desc'>THE ARCHIVE is a full-stack text adventure: React frontend (choices, 18ms typewriter, ambient backgrounds, JWT auth, leaderboard) and Spring Boot backend (38-scene story service, gated choices, achiev…</p><span class='tags'><span>React</span><span>Spring Boot</span><span>JWT</span></span></span><span class='parr'>↗</span></a><div class='acts'><a class='btn-case' href='/projects/adventure-game/'>View Case Study →</a><a class='btn-ghost' href='https://github.com/Somesh4206/adventure-game'>GitHub</a></div></div>
 <div class="prevnext"><a class="back-link" href="/">← Home</a></div></main>
 <footer><span class="footer-copy">© 2026 Somesh M · AI/ML Engineer · Karur, Tamil Nadu, India</span><span class="footer-logo">SM</span></footer></body></html>
