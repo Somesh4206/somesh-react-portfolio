@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OpenBlueprint | AI Architectural Planning | Somesh M</title>
+<meta name="description" content="OpenBlueprint by Somesh M — AI-assisted floor-plan generation, 2D/3D editing and cost estimation."/>
+<link rel="canonical" href="https://somesh-m.netlify.app/projects/openblueprint/"/>
+<meta property="og:title" content="OpenBlueprint | AI Architectural Planning | Somesh M"/><meta property="og:description" content="OpenBlueprint by Somesh M — AI-assisted floor-plan generation, 2D/3D editing and cost estimation."/>
+<meta property="og:url" content="https://somesh-m.netlify.app/projects/openblueprint/"/><meta property="og:type" content="article"/>
+<meta property="og:image" content="https://somesh-m.netlify.app/profile.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+<style>:root{--bg:#FAF6EF;--surface:#FFFDF8;--surface2:#F3EBDD;--ink:#2A2118;--ink2:#4A3D30;--muted:#7C6C59;--accent:#8C5A2B;--accent-deep:#5F3B1A;--accent-soft:#EADBC3;--line:#E4D6BF;--line2:#D6C4A6;--serif:'Fraunces',Georgia,serif;--sans:'DM Sans',sans-serif;--mono:'Space Mono',monospace;--disp:'Bebas Neue',sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E")}
+::selection{background:var(--accent);color:#fff}a{color:var(--accent-deep)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.skip-link{position:fixed;top:-60px;left:16px;z-index:2000;background:var(--ink);color:#fff;font-family:var(--mono);font-size:.75rem;padding:.6rem 1rem;text-decoration:none;transition:top .2s}
+.skip-link:focus{top:12px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 3.5rem;background:rgba(250,246,239,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{font-family:var(--disp);font-size:1.5rem;letter-spacing:.15em;color:var(--ink);text-decoration:none}
+.logo em{font-style:normal;color:var(--accent)}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;position:relative}
+.nav-links a:hover{color:var(--accent-deep)}
+.wrap{max-width:920px;margin:0 auto;padding:7.5rem 1.5rem 4rem;position:relative;z-index:2}
+.case-topnav{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
+.back-link{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-deep);text-decoration:none;border:1px solid var(--line2);padding:.6rem 1rem;border-radius:4px;background:var(--surface)}
+.back-link:hover{border-color:var(--accent)}
+.case-num{font-family:var(--mono);font-size:.7rem;letter-spacing:.25em;color:var(--accent);text-transform:uppercase}
+h1.case-title{font-family:var(--disp);font-size:clamp(2.8rem,6vw,5rem);line-height:.95;letter-spacing:.02em;margin:.6rem 0}
+.case-tagline{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--accent-deep);line-height:1.5}
+.case-intro{font-size:1.02rem;line-height:1.85;color:var(--ink2);margin-top:1.2rem;max-width:680px}
+.case-meta{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
+.case-meta span{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line2);padding:.35rem .7rem;border-radius:20px;background:var(--surface);color:var(--ink2)}
+.case-links{display:flex;gap:.7rem;margin-top:1.4rem;flex-wrap:wrap}
+.btn-primary{padding:.8rem 1.9rem;background:var(--ink);color:#FBF7EE;font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);border-radius:4px;display:inline-block}
+.btn-primary:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
+.btn-outline{padding:.8rem 1.9rem;background:transparent;color:var(--accent-deep);font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--accent);border-radius:4px;display:inline-block}
+.btn-outline:hover{background:var(--accent);color:#fff}
+.btn-ghost{padding:.7rem 1rem;border:1px solid var(--line2);color:var(--ink2);font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-radius:4px;background:transparent;display:inline-block}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent-deep)}
+.case-hero-visual{margin-top:2rem;border:1px solid var(--line2);border-radius:8px;background:var(--surface);padding:2.2rem;position:relative;overflow:hidden}
+.case-hero-visual .big{font-family:var(--disp);font-size:clamp(2.4rem,6vw,4rem);line-height:1}
+.case-hero-visual .sub{font-family:var(--serif);font-style:italic;color:var(--accent-deep);margin-top:.5rem}
+.case-hero-visual .flow-mini{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:1rem;line-height:2;letter-spacing:.04em}
+.case-section{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:2rem;margin-top:1.4rem}
+.case-section h2{font-family:var(--disp);font-size:1.7rem;letter-spacing:.04em;margin-bottom:.3rem}
+.case-kicker{font-family:var(--mono);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.case-section p{font-size:.94rem;line-height:1.85;color:var(--ink2);margin-bottom:.9rem}
+.case-section ul{margin:.4rem 0 1rem 1.1rem;font-size:.92rem;line-height:1.8;color:var(--ink2)}
+.case-section li{margin-bottom:.45rem}
+.case-section strong{color:var(--ink)}
+details.wf-stage{border:1px solid var(--line2);border-radius:6px;background:var(--bg);margin-bottom:.4rem}
+details.wf-stage[open]{border-color:var(--accent)}
+details.wf-stage summary{cursor:pointer;padding:.95rem 1.1rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+details.wf-stage summary::-webkit-details-marker{display:none}
+details.wf-stage summary:hover{color:var(--accent-deep)}
+.wf-detail{padding:0 1.1rem 1.1rem;font-size:.9rem;line-height:1.75;color:var(--ink2)}
+.wf-arrow{text-align:center;color:var(--accent);font-size:1.1rem;line-height:1;padding:.2rem 0}
+.arch-box{border:1px solid var(--line2);border-radius:6px;background:var(--bg);padding:1rem 1.2rem}
+.arch-box b{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-deep);display:block;margin-bottom:.35rem}
+.arch-box p{font-size:.88rem;line-height:1.7;margin:0}
+.arch-arrow{text-align:center;color:var(--accent);padding:.25rem 0;font-size:1.1rem}
+.feat{border:1px solid var(--line);border-radius:6px;padding:1.1rem 1.2rem;margin-top:.8rem;background:var(--bg)}
+.feat h3{font-family:var(--disp);font-size:1.2rem;letter-spacing:.04em;margin-bottom:.3rem}
+.feat p{font-size:.89rem;line-height:1.75;margin-bottom:.3rem}
+.feat .why{font-family:var(--serif);font-style:italic;color:var(--accent-deep);font-size:.9rem}
+table.stack{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.87rem}
+table.stack th{font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;text-align:left;background:var(--surface2);color:var(--accent-deep);padding:.7rem .9rem;border:1px solid var(--line)}
+table.stack td{padding:.7rem .9rem;border:1px solid var(--line);color:var(--ink2)}
+.chal{border-left:3px solid var(--accent);background:var(--bg);padding:1rem 1.2rem;margin-top:.9rem;border-radius:0 6px 6px 0}
+.chal p{font-size:.9rem;margin-bottom:.35rem}
+.disclaimer{font-size:.82rem;line-height:1.7;color:var(--muted);border:1px dashed var(--line2);border-radius:6px;padding:.9rem 1.1rem;background:var(--bg);margin-top:1rem}
+.prevnext{display:flex;justify-content:space-between;gap:.8rem;margin:2rem 0 1rem;flex-wrap:wrap}
+.pcard{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:1.4rem}
+.pcard-visual{padding:1.6rem;border-bottom:1px solid var(--line);position:relative}
+.pcard-visual h2{font-size:2rem}
+.pcard-visual .ptag{font-family:var(--serif);font-style:italic;color:var(--accent-deep)}
+.pcard-body{padding:1.5rem 1.6rem;display:flex;flex-direction:column;gap:.9rem}
+.pcard-desc{font-size:.9rem;line-height:1.7;color:var(--ink2)}
+footer{border-top:1px solid var(--line);padding:1.6rem 3.5rem;display:flex;justify-content:space-between;align-items:center;background:var(--surface);gap:1rem;flex-wrap:wrap;position:relative;z-index:2}
+.footer-copy{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.footer-logo{font-family:var(--disp);font-size:1.15rem;letter-spacing:.15em;color:var(--accent)}
+@media(max-width:960px){nav{padding:1rem 1.4rem}.wrap{padding:6.5rem 1.1rem 3rem}footer{padding:1.4rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav aria-label="Primary"><a href="/" class="logo">S<em>M</em></a>
+<ul class="nav-links"><li><a href="/">Home</a></li><li><a href="/projects/">Projects</a></li><li><a href="https://github.com/Somesh4206/OpenBlueprint">GitHub</a></li></ul></nav>
+<main class="wrap" id="main">
+<div class="case-topnav"><a class="back-link" href="/projects/">← Back to Projects</a><span class="case-num">Project 02 / 06 · AI · Architectural Planning</span></div>
+<p class="case-num">Case Study 02</p>
+<h1 class="case-title">OpenBlueprint</h1>
+<p class="case-tagline">From Measurements to Intelligent Blueprints.</p>
+<p class="case-intro">OpenBlueprint is an AI-assisted architectural planning system: plot measurements and requirements in, reasoned floor-plan options out, then 2D editing, 3D visualisation, INR cost estimation and PDF/PNG/SVG/JSON export. Verified stack: Next.js 16 + React 19 + shadcn, Three.js, Zustand, Prisma/SQLite, OpenAI-compatible AI with offline fallback.</p>
+<div class="case-meta"><span>Next.js</span><span>Three.js</span><span>Prisma</span><span>Zustand</span></div>
+<div class="case-links"><a class="btn-primary" href="https://github.com/Somesh4206/OpenBlueprint" target="_blank" rel="noopener noreferrer">GitHub Repository</a><a class="btn-ghost" href="/projects/">All Projects</a></div>
+<div class="case-hero-visual"><div class="big">OPENBLUEPRINT</div><div class="sub">From Measurements to Intelligent Blueprints.</div>
+<div class="flow-mini">1. Plot input  →  2. Requirements  →  3. AI analysis  →  4. Five strategies  →  5. Floor plan  →  6. 2D editor  →  7. 3D  →  8. Cost  →  9. Export</div></div>
+<section class='case-section'><p class='case-kicker'>01 · Overview</p><h2>Overview</h2><ul><li>Turns plot size, setbacks, floors, rooms and Vastu preferences into scored layout options and an editable workspace.</li><li>Solves the cold-start problem: converting measurements into feasible arrangements respecting orientation, adjacency and privacy.</li><li>For homeowners, architecture students and early design exploration — not licensed structural review.</li><li>Pairs an LLM reason-then-place planner with a deterministic BSP/zone solver, validation, scoring and cost modules.</li></ul></section><section class='case-section'><p class='case-kicker'>02 · The Problem</p><h2>The Problem</h2><ul><li>&#x27;30×40 plot, south road&#x27; → workable plan means juggling setbacks, sizes, adjacency, ventilation, privacy and Vastu.</li><li>Sketch tools don&#x27;t propose; chat tools don&#x27;t enforce geometry.</li><li>Cost feedback arrives too late.</li></ul></section><section class='case-section'><p class='case-kicker'>03 · The Solution</p><h2>The Solution</h2><ul><li>Guided wizard: plot → rooms → preferences/Vastu → summary → floor-distribution dialog.</li><li>AI planner (reasoning, assumptions, questions, placements) + deterministic packing, openings, connectivity repair, auto-furniture.</li><li>Workspace: 2D canvas, 3D view, AI assistant, validation/Vastu panels, cost panel, export modal; Prisma persistence.</li></ul></section><section class='case-section'><p class='case-kicker'>04 · How It Works</p><h2>How It Works</h2><details class='wf-stage' open><summary><span>01 · 1. Plot input</span><span aria-hidden='true'>+</span></summary><p class='wf-detail'>dimensions, setbacks, road/north, floors with live preview.</p></details><div class='wf-arrow' aria-hidden='true'>↓</div><details class='wf-stage'><summary><span>02 · 2. Requirements</span><span aria-hidden='true'>+</span></summary><p class='wf-detail'>rooms, preferences, Vastu; floor-distribution dialog.</p></details><div class='wf-arrow' aria-hidden='true'>↓</div><details class='wf-stage'><summary><span>03 · 3. AI analysis</span><span aria-hidden='true'>+</span></summary><p class='wf-detail'>POST /api/layout/generate; 428 without key, 422 clarification, offline fallback.</p></details><div class='wf-arrow' aria-hidden='true'>↓</div><details class='wf-stage'><summary><span>04 · 4. Five strategies</span><span aria-hidden='true'>+</span></summary><p class='wf-detail'>Space, Ventilation, Modern Open, Privacy, Vastu Compliant.</p></details><div class='wf-arrow' aria-hidden='true'>↓</div><details class='wf-stage'><summary><span>05 · 5. Floor plan</span><span aria-hidden='true'>+</span></summary><p class='wf-detail'>parking carve, BSP pack, openings, repair, connectivity, furniture; 8+ rules.</p></details><div class='wf-arrow' aria-hidden='true'>↓</div><details class='wf-stage'><summary><span>06 · 6. 2D editor</span><span aria-hidden='true'>+</span></summary><p class='wf-detail'>move/resize/split, doors/windows, 47 furniture items, undo/redo.</p></details><div class='wf-arrow' aria-hidden='true'>↓</div><details class='wf-stage'><summary><span>07 · 7. 3D</span><span aria-hidden='true'>+</span></summary><p class='wf-detail'>R3F clay render.</p></details><div class='wf-arrow' aria-hidden='true'>↓</div><details class='wf-stage'><summary><span>08 · 8. Cost</span><span aria-hidden='true'>+</span></summary><p class='wf-detail'>INR grades 1500/1800/2300/3000 per sqft with breakdowns.</p></details><div class='wf-arrow' aria-hidden='true'>↓</div><details class='wf-stage'><summary><span>09 · 9. Export</span><span aria-hidden='true'>+</span></summary><p class='wf-detail'>SVG/PNG + A4 PDF sheet + JSON.</p></details><p style='margin-top:.8rem'>Select a stage to expand it. Every stage maps to code in the repository.</p></section><section class='case-section'><p class='case-kicker'>05 · System Architecture</p><h2>System Architecture</h2><div class='arch-box'><b>Frontend</b><p>Next.js 16 + React 19 + TS + Tailwind 4 + shadcn (47 primitives); Zustand + TanStack Query.</p></div><div class='arch-arrow' aria-hidden='true'>↓</div><div class='arch-box'><b>APIs</b><p>nine routes: projects, layout generate/validate, AI assistant, knowledge, cost, export pdf/image.</p></div><div class='arch-arrow' aria-hidden='true'>↓</div><div class='arch-box'><b>AI</b><p>OpenAI-compatible provider, reason-then-place planner, assistant with offline fallback, keyword RAG over 10 topics.</p></div><div class='arch-arrow' aria-hidden='true'>↓</div><div class='arch-box'><b>Geometry</b><p>engine, rules, planner, scoring, validation, SVG renderer, catalogs.</p></div><div class='arch-arrow' aria-hidden='true'>↓</div><div class='arch-box'><b>Data</b><p>Prisma + SQLite: User, Project, DesignVersion, AiConversation, CostEstimate.</p></div></section><section class='case-section'><p class='case-kicker'>06 · Core Features</p><h2>Core Features</h2><ul><li>Plot wizard with live preview and buildable-area math.</li><li>Five scored strategies (6-axis) making trade-offs explicit.</li><li>Reason-then-place AI with auditable reasoning.</li><li>2D editor + 47 furniture items.</li><li>3D clay render.</li><li>INR cost grades with Lakhs/Crores formatting.</li><li>AI assistant + knowledge RAG with offline fallback.</li><li>Floor-distribution dialog, validation + Vastu report, export suite.</li></ul></section><section class='case-section'><p class='case-kicker'>07 · Technical Implementation</p><h2>Technical Implementation</h2><ul><li>App Router pages, Zustand (30×40 default), TanStack Query, recharts, sharp.</li><li>API routes with zod/uuid; Prisma via lib/db.ts.</li><li>Custom chat/completions provider; z-ai SDK present.</li><li>three + R3F + drei (SSR off); Playwright/e2e, ESLint, Bun.</li></ul></section><section class='case-section'><p class='case-kicker'>08 · My Contribution</p><h2>My Contribution</h2><ul><li>Pipeline: wizard → generate API → solver → workspace → persistence → export.</li><li>AI: planner, assistant actions, knowledge retrieval with fallbacks.</li><li>UI: canvas tooling, 3D wiring, cost/validation/Vastu panels, export modal.</li><li>Schema across projects, versions, conversations, estimates.</li></ul></section><section class='case-section'><p class='case-kicker'>09 · Tech Stack</p><h2>Tech Stack</h2><ul><li>Frontend: Next.js 16 · React 19 · TS · Tailwind 4 · shadcn.</li><li>State: Zustand · TanStack Query.</li><li>3D: Three.js · R3F · drei.</li><li>Backend: API routes · Prisma · SQLite.</li><li>AI: provider · planner · assistant · knowledge RAG.</li><li>Export: SVG · sharp · PDF.</li></ul></section><section class='case-section'><p class='case-kicker'>10 · Challenges &amp; Decisions</p><h2>Challenges &amp; Decisions</h2><ul><li>LLM must obey geometry → LLM proposes intent, solver places rectangles + validation/repair → auditable plans.</li><li>Missing key/ambiguity → 428/422 + cached draft + offline generator → usable without key.</li><li>Vastu vs objectives → bias + dedicated option + enforcement → visible trade-offs.</li></ul></section><section class='case-section'><p class='case-kicker'>11 · Result</p><h2>Result</h2><ul><li>Wizard, 5-strategy generation, 2D editor (47 items), 3D view, cost panel, assistant, validation/Vastu, persistence, exports.</li><li>Deterministic core verified in lib/.</li></ul></section>
+
+<section class="case-section"><p class="case-kicker">12 · Links</p><h2>GitHub / Demo</h2><div class="case-links"><a class="btn-primary" href="https://github.com/Somesh4206/OpenBlueprint" target="_blank" rel="noopener noreferrer">GitHub Repository</a></div></section>
+<div class="prevnext"><a class="back-link" href="/projects/skillvision-ai/">← SkillVision AI</a><a class="back-link" href="/projects/">All Projects</a><a class="back-link" href="/projects/diagnorax/">DiagnoraX AI →</a></div>
+</main>
+<footer><span class="footer-copy">© 2026 Somesh M · OpenBlueprint case study · Karur, Tamil Nadu, India</span><span class="footer-logo">SM</span></footer>
+</body>
+</html>
